@@ -24,6 +24,7 @@ Simple Laravel web application for task management:
 ## Contact
 - E-mail d6174173844@gmail.com
 - PHP Developer Danila Dolmatov
+- LinkedIn https://www.linkedin.com/in/danila-dolmatov/  
 
 
 
