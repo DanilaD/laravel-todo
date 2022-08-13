@@ -1,4 +1,4 @@
-## Task Manager with Drag And Drop
+## Task Manager with Drag And Drop Laravel + Livewire
 
 ## INSTALL
 - get from repostory git@github.com:DanilaD/laravel-todo.git
