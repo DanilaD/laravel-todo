@@ -1,3 +1,5 @@
+## Task Manager with Drag And Drop
+
 ## INSTALL
 - get from repostory git@github.com:DanilaD/laravel-todo.git
 - setup .ENV (connect to Db)
