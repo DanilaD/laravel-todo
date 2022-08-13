@@ -57,7 +57,6 @@ class ToDoComponent extends Component
     {
         // open view
         $this->add = 'add';
-
     }
 
     /**
@@ -79,7 +78,7 @@ class ToDoComponent extends Component
         // validate
         $this->validate([
             'task.id' => 'required_if:add,"edit"',
-            'task.name' => 'required|string',
+            'task.name' => 'required|string|max:250',
             'task.project_id' => 'required|numeric',
             'task.priority' => 'required|numeric'
         ]);

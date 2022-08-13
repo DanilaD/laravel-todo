@@ -10,7 +10,7 @@ class Tasks extends Model
     use HasFactory;
 
     protected $casts = [
-        'priority' => 'bool',
+        'priority' => 'int',
         'project_idproject_id' => 'int',
         'sort' => 'int'
     ];
