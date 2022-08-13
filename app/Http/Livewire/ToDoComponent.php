@@ -47,7 +47,7 @@ class ToDoComponent extends Component
             if($this->search['name']) {
                 $q->where('name', 'like', $this->search['name'].'%');
             }
-        })->orderby('priority', 'asc')->orderby('updated_at', 'desc')->get(); //paginate(15);
+        })->with('Project')->orderby('priority', 'asc')->orderby('updated_at', 'desc')->get(); //paginate(15);
     }
 
     /**
