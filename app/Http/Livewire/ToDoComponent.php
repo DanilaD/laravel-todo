@@ -39,15 +39,24 @@ class ToDoComponent extends Component
      * @return mixed
      */
     private function getData() {
-        return Tasks::whereHas('Project', function ($q) {
-            if($this->search['project_id']) {
-                $q->where('id', $this->search['project_id']);
-            }
-        })->where(function ($q) {
-            if($this->search['name']) {
-                $q->where('name', 'like', $this->search['name'].'%');
-            }
-        })->with('Project')->orderby('priority', 'asc')->orderby('updated_at', 'desc')->get(); //paginate(15);
+        return Tasks::when($this->search['project_id'], function ($query) {
+                $query->whereHas('Project', function ($q) {
+                    if ($this->search['project_id']) {
+                        $q->where('id', $this->search['project_id']);
+                    }
+                });
+            })
+            ->when($this->search['name'], function ($query) {
+                $query->where(function ($q) {
+                    if ($this->search['name']) {
+                        $q->where('name', 'like', $this->search['name'] . '%');
+                    }
+                });
+            })
+            ->with('Project')
+            ->orderby('priority', 'asc')
+            ->orderby('updated_at', 'desc')
+            ->get(); //paginate(15);
     }
 
     /**
