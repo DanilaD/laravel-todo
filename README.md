@@ -7,8 +7,8 @@
 - composer install
 - php artisan migrate
 - php artisan db:seed
-- npn install
-- npm run dev OR npm run prod
+- npm install
+- npm run dev
 
 ## DESCRIPTION
 Simple Laravel web application for task management:
