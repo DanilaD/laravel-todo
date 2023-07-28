@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>laravel datatables pagination with search and sort - nicesnippets.com</title>
+    <title>laravel datatables pagination with search and sort</title>
     <!-- jQuery CDN -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Datatables CSS CDN -->
