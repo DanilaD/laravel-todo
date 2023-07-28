@@ -17,5 +17,6 @@ class DatabaseSeeder extends Seeder
 
         $this->call(SettingsProjectSeeder::class);
         $this->call(TasksSeeder::class);
+        $this->call(UsersSeeder::class);
     }
 }

@@ -28,7 +28,7 @@
         <div>
             <ul wire:sortable="updateTaskOrder">
                 @foreach ($data as $v)
-                    <li wire:sortable.item="{{ $v->id }}" wire:key="task-{{ $v->id }}">
+                    <div wire:sortable.item="{{ $v->id }}" wire:key="task-{{ $v->id }}" draggable="true" >
                         <div class="row">
                             <div class="col-md-6">
                                 {{$v->name}}
@@ -48,9 +48,10 @@
                             </div>
                         </div>
                         <hr/>
-                    </li>
+                    </div>
                 @endforeach
             </ul>
+            {{ $data->links() }}
         </div>
     </div>
 </div>
