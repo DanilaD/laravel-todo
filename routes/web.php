@@ -13,7 +13,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Http\Livewire\ToDoComponent::class);
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('todo', \App\Http\Livewire\ToDoComponent::class);
 
 Route::get('users','\App\Http\Controllers\UserController@index');
 Route::get('/users/getusers/','\App\Http\Controllers\UserController@getUser')->name('users.getusers');
